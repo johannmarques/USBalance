@@ -131,6 +131,7 @@ data %>%
   scale_linetype_manual(values = c('Riskier Assets' = 'solid',
                                    'Safer Liabilities' = 'dashed')) +
   theme_minimal() +
+  theme(plot.background = element_rect(fill = 'white')) +
   labs(x = '', color = '', linetype = '', y = 'Percent',
        title = 'Asset class composition of US external portfolio')
 ggsave('figures/composition.pdf')
